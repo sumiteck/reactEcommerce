@@ -1,21 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import IndexScreen from './src/screens/IndexScreen';
+import Cart from './src/screens/Cart';
+import LoginScreen from './src/screens/LoginScreen';
+import SignupScreen from './src/screens/SignupScreen';
+import ProductDetails from './src/screens/ProductDetails';
+import ProductList from './src/screens/ProductList';
+import ConfirmOrder from './src/screens/ConfirmOrder';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+
+
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="SignupScreen">
+      <Stack.Screen name="SignupScreen" component={SignupScreen} options={{ headerShown: false }}/>
+      <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Screen name="ProductList" component={ProductList} />
+      <Stack.Screen name="ProductDetails" component={ProductDetails} />
+        <Stack.Screen name="IndexScreen" component={IndexScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+export default App;

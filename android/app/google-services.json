@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "396504526827",
+    "firebase_url": "https://ecommerce-c8fbe.firebaseio.com",
+    "project_id": "ecommerce-c8fbe",
+    "storage_bucket": "ecommerce-c8fbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396504526827:android:81aaac521ed17d2de8f3ae",
+        "android_client_info": {
+          "package_name": "ecommerce.changer.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "396504526827-9jcbac7plfhb2lc8pe75oegui7fuhodg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDq4hoDSjyRHW8PlITE2ChYVJDyi6w4kOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396504526827-9jcbac7plfhb2lc8pe75oegui7fuhodg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
