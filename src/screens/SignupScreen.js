@@ -8,7 +8,7 @@ import auth from '@react-native-firebase/auth';
 
 
 
-const SignupScreen = (navigation) =>{
+const SignupScreen = (props) =>{
 
 
   const [email, setEmail] = useState("");
@@ -19,7 +19,9 @@ const SignupScreen = (navigation) =>{
   .createUserWithEmailAndPassword(email, password)
   .then(() => {
     console.log('User account created & signed in!');
+    props.navigation.navigate('IndexScreen')
   })
+    
   .catch(error => {
     if (error.code === 'auth/email-already-in-use') {
       console.log('That email address is already in use!');
